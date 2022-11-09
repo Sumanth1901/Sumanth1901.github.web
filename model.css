@@ -1,0 +1,44 @@
+/*.abc{
+    padding: 30px;
+    padding-right:30px;
+     padding-left:30px;
+       
+    padding:30px;
+    border:2px dotted red;
+    margin: 20px;
+    background-color: aqua;
+    }*/
+    
+    .rect{
+        border:20px solid blueviolet;
+        height: 300px;
+        width: 300px;
+    }
+    .recta{
+        padding: 30;
+        border:20px solid rgb(226, 43, 46);
+       
+        height: 100px;
+        width: 200px;
+    }
+  .a{
+    background-color: rgb(108, 233, 24);
+  }
+  .b{
+    background-color: rgb(41, 14, 222);
+  }
+  .c{
+    background-color: rgb(233, 24, 38);
+  }
+  .y{
+    background-image: url('./G:\HDD\heart_disease_prediction\assests\static\sms.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  
