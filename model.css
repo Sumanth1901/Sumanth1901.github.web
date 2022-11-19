@@ -17,12 +17,14 @@
     .recta{
         padding: 30;
         border:20px solid rgb(226, 43, 46);
+        margin: 40px;
        
         height: 100px;
         width: 200px;
     }
   .a{
     background-color: rgb(108, 233, 24);
+    
   }
   .b{
     background-color: rgb(41, 14, 222);
@@ -31,10 +33,10 @@
     background-color: rgb(233, 24, 38);
   }
   .y{
-    background-image: url('./G:\HDD\heart_disease_prediction\assests\static\sms.jpg');
-    background-size: cover;
-    width: 200px;
-    height: 100vh;
+    background-image: url('Wallpaper.jpeg');
+
+    width: 900px;
+    height: 600px;
     background-repeat: no-repeat;
   }
   *{
