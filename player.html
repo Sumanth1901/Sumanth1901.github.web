@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        html{
+
+            height: 100%;
+        }
+        button{
+            float: left;
+        }
+        div{
+            float: right;
+            color: blue;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        let para=document.createElement("p")
+    function player1(){
+        let image = document.createElement("img")
+        image.src="Virat.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let ima = document.getElementById("ima")
+        ima.appendChild(image)
+        document.getElementById("message").innerHTML="Virat";
+       // let para=document.createElement("p")
+        let text=document.createTextNode("captain")
+        para.appendChild(text)
+
+        console.log(para)
+        let p=document.getElementById("vit")
+        p.appendChild(para)
+    }
+    function player2(){
+        document.getElementById("message1").innerHTML='Dhoni';
+        let image = document.createElement("img")
+        image.src="dhoni.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message1 = document.getElementById("message1")
+        message1.appendChild(image)
+
+        let text1=document.createTextNode("csk player")
+        para.appendChild(text1)
+
+        console.log(para)
+        let p1=document.getElementById("dho")
+        p1.appendChild(para)
+    }
+    function player3(){
+        document.getElementById("message2").innerHTML='raina';
+        let image = document.createElement("img")
+        image.src="raina.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message2 = document.getElementById("message2")
+        message2.appendChild(image)
+
+        let text2=document.createTextNode("suresh raina legend")
+        para.appendChild(text2)
+
+        console.log(para)
+        let p2=document.getElementById("rai")
+        p2.appendChild(para)
+    }
+    function player4(){
+        document.getElementById("message3").innerHTML='bumrah';
+        let image = document.createElement("img")
+        image.src="bum.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message3 = document.getElementById("message3")
+        message3.appendChild(image)
+
+        let text3=document.createTextNode("one of the best bowler")
+        para.appendChild(text3)
+
+        console.log(para)
+        let p3=document.getElementById("bum")
+        p3.appendChild(para)
+    }
+    function player5(){
+        document.getElementById("message4").innerHTML='shami';
+        let image = document.createElement("img")
+        image.src="shami.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message4 = document.getElementById("message4")
+        message4.appendChild(image)
+
+        let text4=document.createTextNode("all rounder")
+        para.appendChild(text4)
+
+        console.log(para)
+        let p4=document.getElementById("smi")
+        p4.appendChild(para)
+    }
+    function player6(){
+        document.getElementById("message5").innerHTML='ishan';
+        let image = document.createElement("img")
+        image.src="ishan.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message5 = document.getElementById("message5")
+        message5.appendChild(image)
+    }
+    function player7(){
+        document.getElementById("message6").innerHTML='Sachin';
+        let image = document.createElement("img")
+        image.src="sachin.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message6 = document.getElementById("message6")
+        message6.appendChild(image)
+    }
+    function player8(){
+        document.getElementById("message7").innerHTML='jadeja';
+        let image = document.createElement("img")
+        image.src="jadeja.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message7 = document.getElementById("message7")
+        message7.appendChild(image)
+    }
+    function player9(){
+        document.getElementById("message8").innerHTML='pant';
+        let image = document.createElement("img")
+        image.src="pant.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message8 = document.getElementById("message8")
+        message8.appendChild(image)
+
+    }
+    function player10(){
+        document.getElementById("message9").innerHTML='rohith';
+        let image = document.createElement("img")
+        image.src="rohit.jpg"
+        image.style.width = "100px"
+        image.style.height = "100px"
+        let message9 = document.getElementById("message9")
+        message9.appendChild(image)
+    }
+    
+    </script>
+</head>
+<body>
+    <span style="margin: auto;float: left; width: 180px;">
+  
+        <h1 style="color:rgb(16, 238, 8)">CRICKET TEAM INDIA</h1>
+        <button onclick="player1()">Players1</button>
+        <span id="message"></span>
+        <span id="ima" ></span>
+        <div id="vit"></div>
+        <br><br><br>
+     <button onclick="player2()">Players2</button>
+        <span id="message1" align ="center"></span>
+        <div id="dho"></div>
+        <br><br><br>
+        <button onclick="player3()">Players3</button>
+        <span id="message2"></span>
+        <div id="rai"></div>
+        <br><br><br>
+       <button onclick="player4()">Players4</button>
+        <span id="message3"></span>
+        <div id="bum"></div>
+        <br><br><br>
+        <button onclick="player5()">Players5</button>
+        <span id="message4"></span>
+        <br><br><br>
+        <button onclick="player6()">Players6</button>
+        <span id="message5"></span>
+        <br><br><br>
+       <button onclick="player7()">Players7</button>
+        <span id="message6"></span>
+        <br><br><br>
+        <button onclick="player8()">Players8</button>
+        <span id="message7"></span>
+        <br><br><br>
+        <button onclick="player9()">Players9</button>
+        <span id="message8"></span>
+        <br><br><br>
+        <button onclick="player10()">Players10</button>
+        <span id="message9"></span>
+        <br><br><br>
+    </span>
+        
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events in JavaScript</title>
+    <style>
+/*         styling the div tag */
+        div {
+            height: 100px;
+            width: 100px;
+            color: indigo;
+            background-color: rgb(255, 255, 255);
+            border: 7px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="testbox" onclick="myFunc()">
+        Test Box
+    </div>
+
+   
+  
+   <div id="add"> </div>
+   <button id="btn">Button</button>
+    <!--     line break -->
+        <br> 
+        <br>
+        <button id="btnn">Button</button>
+        <!--     line break -->
+            <br>
+            <br>
+            <div id="add"></div>
+            <br>
+    <script>
+        // This function is attached with onclick event
+        function myFunc() {
+            let elem = document.getElementById("testbox");
+            elem.innerText = "Test Box: Click event is fired";
+            elem.style.color = "red";
+        }
+
+        let btn = document.getElementById('btn');
+        // addding an event listener on the selected button
+        btn.addEventListener('dblclick',(event) => {
+            let div = document.getElementById('add');
+            div.innerText = "Double click event is fired"
+        });
+
+         let btnn = document.getElementById('btn');
+        // adding event listener on the selected button
+        btn.addEventListener('mousedown',(event) => {
+            let div = document.getElementById('add');
+            div.innerText = "Mousedown event is fired"
+        });
+    </script>
+</body>
+
+</html>

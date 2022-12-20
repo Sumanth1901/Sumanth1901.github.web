@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+function onclickk() {
+document.getElementById("a").innerHTML="The Mouse click event is generated and it handled.";
+}
+function Mouseup() {
+document.getElementById("b").innerHTML="The Mouse up event is generated and it handled.";
+}
+</script>
+<body>
+    <button onclick= "onclickk()" style="color:#FF0000"> Click here to generate mouse click event. </button>
+    <div id="a" style="color: #0900C4"></div>
+
+    <button onmouseup= "Mouseup()" style="color:#FF0000"> Click here to generate mouse up event. </button>
+    <div id="b" style="color: #0900C4"></div>
+    
+</body>
+</html>

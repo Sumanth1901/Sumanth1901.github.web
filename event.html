@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function disp(){
+        //     console.log("calling fun")
+        //     let c=document.getElementById("message")
+        //     console.log(c)
+        //     c.innerHTML="<h1>calling display data</h1>"
+        //     c.style.color="red"
+        // }
+        function details()
+        {
+            let d=document.getElementById("name")
+            console.log(d)
+            console.log(d.value)
+
+            let f=document.getElementById("dis")
+           f.innerHTML=d.value
+
+        }
+        //abv code will replace the content inner html tag inside the div tag getting the address of div tag by getelement by id 
+        //and storing it into variable using fun var.innerhtml we can replce the data inside the div tag
+    </script>
+</head>
+<body>
+    <h1>Indian Cricket Team</h1>
+    <!-- <div id="message"></div>
+    <button onclick="disp()">calling</button> -->
+
+    <form>
+        <label>enter name</label>
+        <input type="text" id="name">
+       
+        <div id="dis"></div>
+    </form>
+    <button onclick="details()">Player1</button>
+
+    
+
+    
+</body>
+</html>
