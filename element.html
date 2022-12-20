@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>element</title>
+
+        <script>
+            function displayImage() {
+                let image = document.createElement("img")
+                image.src = "cal.jpg"
+                image.style.width = "500px"
+                document.body.appendChild(image)
+                
+               let loadImage = document.getElementById("loadImage")
+                loadImage.appendChild(image)
+            }
+
+
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div id="loadImage"></div>
+            
+            <button onclick="displayImage()"> Display Iamge</button>
+
+        
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            console.log("calling validate")
+            let fs=document.getElementById("frst")
+            console.log(fs.value)
+            console.log(fs.value.length)
+            let r=document.getElementById("a")
+
+            let s=document.getElementById("pass")
+            let p=document.getElementById("b")
+            p.style.color='purple'
+
+
+if(fs.value=="" && onclick)
+{
+    r.innerHTML="enter name plz"
+}
+            if(fs.value=="" || s.value=="")
+            {
+               // console.log("plz enter the name and password")
+                r.innerHTML="plz enter the name "
+                if(s.value==""){
+                p.innerHTML="enter password"
+               
+                
+                p.style.color='red'
+                }
+                r.style.color='red'
+               
+            }
+            // else if(s.value==""){
+            //     p.innerHTML="enter password"
+                
+            //     p.style.color='red'
+            //     }
+            else if(s.value=="" || s.value.length<6)
+            {
+                p.innerHTML="plz enter the  password of6"
+                p.style.color='red'
+            }
+            else{
+                r.innerHTML=fs.value
+                p.innerHTML=s.value
+            }
+
+            console.log(document.registration.gender)
+            console.log(document.registration.gender[0])
+            console.log(document.registration.gender[0].checked)
+            console.log(document.registration.gender[1].checked)
+            console.log(document.registration.gender[2].checked)
+
+            let c=document.getElementById("ge")
+          
+
+         if(document.registration.gender[0].checked==false && document.registration.gender[1].checked==false && document.registration.gender[2].checked==false)
+          {
+            console.log("enter the gendr plz")
+            
+           c.innerHTML="plz enter the gender"
+          }
+         
+         else if(document.registration.gender[0].checked==true )
+            {
+            // let y=document.getElementById("gen")
+            let val=document.registration.gender[0]
+            c.innerHTML=val.value 
+           }
+          
+           else if(document.registration.gender[1].checked==true)
+            {
+                // let s=document.getElementById("gen")
+                let ty=document.registration.gender[1]
+                c.innerHTML=ty.value
+            }
+            else if(document.registration.gender[2].checked==true)
+            {
+                // let l=document.getElementById("gen")
+                let n=document.registration.gender[2]
+                c.innerHTML=n.value
+            }
+
+         
+       
+    }
+    // let city
+    // if(city.value==0)
+    // {
+
+    let genderdata
+
+    if(document.registration.gender[0].checked==true)
+    {
+        document.registration.gender[0].checked.value
+    }
+    else if(document.registration.gender[1].checked==true)
+    {
+        document.registration.gender[1].checked.value
+    }
+   else if(document.registration.gender[2].checked==true)
+    {
+        document.registration.gender[2].checked.value
+    }
+
+    let j=document.getElementById("sel")
+          console.log(document.registration.city)
+          console.log(j.value)
+
+         
+          q.innerHTML=j.value
+          let city=document.registration.city
+          mo
+          if(city.value=="0"){
+            console.log("enter city")
+            let  q=document.getElementById("d")
+            q.innerHTML='enter city'
+            q.style.color='red'
+          }
+
+
+    let regis={
+        'first':fs.value,
+        'passwordv':s.value,
+        'gender':genderdata
+       ,'city': city.value
+
+    }
+    console.log(regis)
+
+   
+
+    </script>
+</head>
+<body>
+  <b> <center> <form name="registration">
+        <div>
+            <label>enter name</label>
+            <input type="text" name="frst name" id="frst">
+            <div id="a"></div></div>
+        
+        <!-- <button tyepe="button" onmouseover="validate()">register</button> -->
+
+        <div>  <label>enter password</label>
+            <input type="password" name="password" id="pass">
+       
+        <div id="b"></div></div><br>
+        <br>
+
+        <div>
+            <label>Select Gender:</label>
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="female">female
+            <input type="radio" name="gender" value="others">other
+        </div>
+        <div id="ge"></div>
+
+        <div><label>select city</label>
+            <select name="city" id="sel">
+                <option value="0">-------</option>
+                <option>shimoga</option>
+                <option>bnglr</option>
+            </select>
+        </div>
+        <div id="d"></div>
+        <button tyep="button" onmouseover="validate()">register</button>
+    </form></center></b>
+    
+</body>
+</html>

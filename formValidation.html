@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function valdateFirstName(){
+            let firstName = document.getElementById("firstName") 
+            console.log(firstName.value)
+            console.log(firstName.value.length)
+            let message = document.getElementById("firstNameMessage")
+            message.innerHTML=""
+            if(firstName.value == "") 
+            {
+                console.log("Please Enter the Firstname")
+                let message = document.getElementById("firstNameMessage")
+                message.innerHTML = "Please Enter Firstname"
+                message.style.color = 'red'
+            }
+
+
+        }
+
+        function validatePass()
+        {
+            let password= document.getElementById("password")
+            console.log(password)
+            let passwordMessage = document.getElementById("passwordMessage")
+            passwordMessage.innerHTML=''
+            if(password.value.length == '')
+            {
+                console.log("Please Enter password")
+                //let passwordMessage = document.getElementById("passwordMessage")
+                passwordMessage.innerHTML = "Please Enter password"
+                passwordMessage.style.color = 'red'
+            }
+
+        }
+        function validate(){
+            console.log("calling validate") 
+            let firstName = document.getElementById("firstName") 
+            console.log(firstName.value)
+            console.log(firstName.value.length)
+            if(firstName.value == "") 
+            {
+                console.log("Please Enter the Firstname")
+                let message = document.getElementById("firstNameMessage")
+                message.innerHTML = "Please Enter Firstname"
+                message.style.color = 'red'
+            }
+            let Email=document.getElementById("Email")
+            console.log(Email.value)
+            if(Email.value=="")
+            {
+                console.log("enter email")
+                let messageE=document.getElementById("EmailMessage")
+                messageE.innerHTML="enter the email"
+                messageE.style.color='red'
+            }
+            //if(firstName.value.length == "0") {
+            //    console.log("Please Enter Firstname")  
+            //}
+           let password= document.getElementById("password")
+            console.log(password)
+            if(password.value.length == 0){
+                console.log("Please Enter password")
+                let passwordMessage = document.getElementById("passwordMessage")
+                passwordMessage.innerHTML = "Please Enter password"
+                passwordMessage.style.color = 'red'
+            }
+            else if(password.value.length <4){
+                console.log("Password is weak")
+                let passwordMessage = document.getElementById("passwordMessage")
+                passwordMessage.innerHTML = "password is to long"
+                passwordMessage.style.color = 'green'
+            }
+            console.log(document.registration.gender)
+            console.log(document.registration.gender[0])
+            console.log(document.registration.gender[0].checked)
+            console.log(document.registration.gender[1].checked)
+            console.log(document.registration.gender[2].checked)
+            if(document.registration.gender[0].checked == false &&
+            document.registration.gender[1].checked == false &&
+            document.registration.gender[2].checked == false) {
+                console.log("Please Select Gender")
+                let genderMessage = document.getElementById("genderMessage")
+                genderMessage.innerHTML = "Please Select Gender"
+                genderMessage.style.color ='red'
+            }
+            
+            let genderData
+            if(document.registration.gender[0].checked == true) {
+                genderData = document.registration.gender[0].value
+            }else if(document.registration.gender[1].checked == true) {
+                genderData = document.registration.gender[1].value
+            }else if(document.registration.gender[2].checked == true) {
+                genderData = document.registration.gender[2].value
+            }
+
+            console.log(document.registration.city)
+            let city = document.registration.city
+            if(city.value == "0"){
+                console.log("Please select city")
+               let cityMessage = document.getElementById("cityMessage")
+               cityMessage.innerHTML = "Please select city"
+               cityMessage.style.color = 'red'
+            }
+
+            let registration = {
+                'Email':Email.value,
+                'firstName' : firstName.value,
+                'password' : password.value,
+                'gender' : genderData,
+                'city' : city.value
+            }
+            console.log(registration)
+            console.log(JSON.stringify(registration))
+            let registrationString = JSON.stringify(registration)
+
+            localStorage.setItem("noncsr",registrationString)
+
+
+
+
+
+            //how html page is loaded in broser
+            //Broser will have an engine called browser engine
+
+            /*Browser engine will be responsible to render the web page
+            Browser engine will perform will perform 2 step to load the html page
+            1.It read html file and create an object for each html 
+            2.Objects are linked to form a tree. This tree is called as
+            (Document object model)
+
+            DOM - It is used ti access and manipulate html Element
+            Access - document.getElementById
+            manipulate/modify - innerHTML*/
+
+        }
+
+
+        let tree = {}
+        //tree name , lifespan
+        //key , valu0e pair
+
+        tree ={
+            'name': 'Banyan',
+            'lifespan': 500
+        }
+        console.log(tree)
+
+    </script>
+</head>
+<body>
+
+    <form name="registration">
+        <div>
+            <label>Enter Email</label>
+            <input type="email" name="Email" id="Email">
+            <span id="EmailMessage"></span>
+        </div>
+        <div>
+            <label>Enter FirstName</label>
+            <input type="text" name="firstName" id="firstName" onblur="valdateFirstName()" onkeydown="valdateFirstName()">
+            <span id="firstNameMessage"></span>
+        </div>
+        <div>
+            <label>Enter password</label>
+            <input type="password" name="password" id="password" onblur="validatepass()" onkeydown="validatePass()">
+            <span id="passwordMessage"></span>
+        </div>
+        <div>
+            <label>Selector Gender</label>
+            <input type="radio" name="gender"value="m">Male
+            <input type="radio" name="gender"value="f">Female
+            <input type="radio" name="gender"value="o">Other
+            <span id="genderMessage"></span>
+        </div>
+
+        <div>
+            <label>Select City</label>
+            <select name="city" >
+                <option value="0" >--Select City--</option>
+                <option>Bengalore</option>
+                <option>Mysure</option>
+            </select>
+            <span id="cityMessage"></span>
+        </div>
+        <button type="button" onclick="validate()">Register</button>
+    </form>
+    
+</body>
+</html>

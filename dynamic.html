@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("intruduction to javascript")
+        var a; //declaration
+        a="javascript" //intialization
+        console.log(a)
+        console.log(typeof(a))
+        var b
+        b=10
+        console.log(b)
+
+        a=20
+        console.log(a)
+        console.log(typeof(a))
+        a=20.25
+        console.log(a)
+        console.log(typeof(a))
+
+        a=true
+        console.log(a)
+        console.log(typeof(a))
+
+        let c
+        console.log(c)
+
+        var a
+        console.log(a)
+       
+       
+        function display()
+        {
+            console.log(" executing js");
+            document.write(" using js document ");
+        }
+        display()
+
+        document.write("<h1> using js document</h1> ");
+        document.write("<h2> using js document</h2> ");
+        document.write("<h3> using js document</h3> ");
+        document.write("<h4> using js document</h4> ");
+        document.write("<h5> using js document</h5> ");
+//pop up message box
+
+        //alert("this is alert statementS]u)
+
+       let res= confirm("this is message with confirm")
+
+    //    console.log(res)
+
+       let s=prompt("enter the name")
+       console.log(s)
+
+       document.write(s)
+
+       if(s=='sumanth')
+       {
+        document.write('<br>'+s)
+       }
+       else{
+        document.write('<br>'+"javascriptaas")
+       }
+
+       function dis(a,b)
+       {
+        console.log(a+b)
+       }
+
+       dis(10,20)
+
+       //declare a constant variable we use const
+       const pi=3.14;
+       console.log(pi)
+ function star(){
+       document.write('<br>')
+       for(let i=5;i>0;i--)
+       {
+        for(let j=0;j<i;j++)
+        {
+            document.write(" * ")
+        }
+        document.write('<br>')
+       }
+    }
+    
+
+
+
+    </script>
+</head>
+<body>
+    <button onclick="star()">"printing star</button>
+    <button onmouseover="star()">"printing star</button>
+    <!-- javascript must be written in head tag and inside a <script> </scpit> tags 
+    
+    Datatypes in javascripe : number,string,boolean,undefined
+
+    var a;
+    let b; semiclon is not mandotary
+
+        var and let is used to define a variable
+    
+    we cannot reintialize the let variable but we can reintialize the (var) declared variable
+
+to print  we use console.log(" ");  methode and one more document.write(" ");
+
+we use typeof(a); to see the variable datatype
+
+declaring a function in javascript function functioname-->
+</body>
+</html>

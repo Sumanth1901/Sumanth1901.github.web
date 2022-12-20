@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("cal.jpg");
+            background-size: cover;
+            
+             background-clip: D/web/javascript/stock-footage-close-up-of-man-s-hand-with-a-computer-mouse-and-in-the-background-development-team-working-on.webm;
+        }
+    </style>
+    <script>
+        function add(){
+            let p=document.getElementById("num1")
+            let q=document.getElementById("num2")
+            let r=parseInt(p.value)
+            let s=parseInt(q.value)
+            let w=document.getElementById("add1")
+            w.innerHTML=r+s
+            
+        }
+        function sub(){
+            let p=document.getElementById("num4")
+            let q=document.getElementById("num5")
+            let r=parseInt(p.value)
+            let s=parseInt(q.value)
+            let w=document.getElementById("sub1")
+            w.innerHTML=r-s
+        }
+        function mul(){
+            let p=document.getElementById("num6")
+            let q=document.getElementById("num7")
+            let r=parseInt(p.value)
+            let s=parseInt(q.value)
+            let w=document.getElementById("mul1")
+            w.innerHTML=r*s
+        }
+        function div(){
+            let p=document.getElementById("num8")
+            let q=document.getElementById("num9")
+            let r=parseInt(p.value)
+            let s=parseInt(q.value)
+            let w=document.getElementById("div1")
+            w.innerHTML=r/s
+        }
+    </script>
+</head>
+<body bgcolor="grey">
+    <center> <b><i><h1 style="color: yellow;">OPERATIONS</h1></i>
+        <!-- <img src="cal.jpg" height="100" width="100"> -->
+    <form>
+        <div>
+        <label>enter num 1</label>
+        <input type="text" id="num1">
+    </div><br>
+    <div>
+        <label>enter num2</label>
+        <input type="text" id="num2">
+    </div><br>
+  <div>  <button onmouseover="add()">addition</button></div><br>
+<div id="add1"></div></form>
+
+   <form>
+        <div>
+        <label>enter num 1</label>
+        <input type="text" id="num4">
+    </div><br>
+    <div>
+        <label>enter num2</label>
+        <input type="text" id="num5">
+    </div><br>
+   <div><button onmouseover="sub()">substration</button><br></div><br>
+   <div id="sub1"></div></form>
+   <form>
+    <div>
+    <label>enter num 1</label>
+    <input type="text" id="num6" placeholder="num1">
+</div><br>
+<div>
+    <label>enter num2</label>
+    <input type="text" id="num7"  placeholder="num2">
+</div><br>
+
+   <div> <button onmouseover="mul()">multiplication</button></div><br>
+   <div id="mul1"></div></form>
+   <form>
+    <div>
+    <label>enter num 1</label>
+    <input type="text" id="num8">
+</div><br>
+<div>
+    <label>enter num2</label>
+    <input type="text" id="num9 ">
+</div><br>
+    <button onmouseover="div()">division</button>
+    <div id="div1"></div></form>
+    </form></center></b>
+</body>
+</html>
